@@ -11,7 +11,7 @@ If these four hold, the rest will take care of itself.
 A software system can assure the last three. 
 
 An imaging system located on top of every ballot collection box collects the ballots. 
-An embedded system 
+Embedded system 
   1) Images each ballot, 
   2) Records each each ballot, 
   3) Collects each vote cast, 
@@ -19,6 +19,13 @@ An embedded system
   5) Prints a day end report
   6) Connects to central system uploads day end report
   7) Uses the unique identifier system to verify each ballot was scanned only once
+  8) Manages states for each stage of the vote day.
+  9) Manages the terminus of ballots.
+Central System 
+  1) Tabulates all the collected votes
+  2) Requires a user to enter the day end report that was printed with a unique identifier
+  3) Uses ML to compare the unique identifiers across all ballots to verify that each ballot was counted only once. 
+  4) Allows recount entry and verification of unique identification system manually.
 
 No access to the system through TCP or Serial. 
 The system can connects out to a central system through TCP but only after it has been moved to END_OF_DAY (EOD). 
