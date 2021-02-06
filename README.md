@@ -36,18 +36,17 @@ The system can connects out to a central system through TCP but only after it ha
 9) Any scanned ballot that is Invalid will not be accepted into the ballot box. 
 
 Modules:
-Embedded Vote Collection - EVC
-Cloud Vote Verification - CVV
+  Embedded Vote Collection - EVC
+  Cloud Vote Verification - CVV
 
 Services:
-EVC::Imaging
-EVC::UniqueID
-EVC::Collection
-EVC::Settings
-EVC::Security
+  EVC::Imaging
+  EVC::UniqueID
+  EVC::Collection
+  EVC::Settings
+  EVC::Security
 
-CVV::MachineLearning
-CVV::Tabulation
-CVV::Security
-CVV::Settings
-
+  CVV::MachineLearning
+  CVV::Tabulation
+  CVV::Security
+  CVV::Settings
