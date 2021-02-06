@@ -11,6 +11,7 @@ If these four hold, the rest will take care of itself.
 A software system can assure the last three. 
 
 An imaging system located on top of every ballot collection box collects the ballots. 
+
 Embedded system 
   1) Images each ballot, 
   2) Records each each ballot, 
@@ -21,6 +22,7 @@ Embedded system
   7) Uses the unique identifier system to verify each ballot was scanned only once
   8) Manages states for each stage of the vote day.
   9) Manages the terminus of ballots.
+
 Central System 
   1) Tabulates all the collected votes
   2) Requires a user to enter the day end report that was printed with a unique identifier
