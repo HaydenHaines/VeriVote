@@ -1,5 +1,5 @@
 # Verita
-Open source vote system written in rust for absolutely trustworthy voting systems
+Open source voting system written in Rust
 
 The goal of a voting system is four fold. 
 1) That the citizenry is assured that only legal voters cast legal ballots.
