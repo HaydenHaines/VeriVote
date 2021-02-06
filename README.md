@@ -12,13 +12,13 @@ A software system can assure the last three.
 
 An imaging system located on top of every ballot collection box collects the ballots. 
 An embedded system 
-  a) Images each ballot, 
-  b) Records each each ballot, 
-  c) Collects each vote cast, 
-  d) Uses an individual unique identifier system
-  e) Prints a day end report
-  f) Connects to central system uploads day end report
-  g) Uses the unique identifier system to verify each ballot was scanned only once
+  a. Images each ballot, 
+  b. Records each each ballot, 
+  c. Collects each vote cast, 
+  d. Uses an individual unique identifier system
+  e. Prints a day end report
+  f. Connects to central system uploads day end report
+  g. Uses the unique identifier system to verify each ballot was scanned only once
 
 No access to the system through TCP or Serial. 
 The system can connects out to a central system through TCP but only after it has been moved to END_OF_DAY (EOD). 
@@ -30,23 +30,23 @@ The system can connects out to a central system through TCP but only after it ha
 6) Once IAT is approved, the system moves to OPERATIONAL (O_MODE). 
 7) In O_MODE, no TCP or Serial connection is possible. 
 8) In O_MODE, each ballot scanned is recorded as a incrementing number with a status of
-  a) Full - all ballot options have one and only one selection and the unique mark is in place
-  b) Partial - some ballot options are selected but no more than one selection for any option and the unique mark is in place
-  c) Invalid - any number of ballot option has more than one selection or the unique mark is not in place
+  a. Full - all ballot options have one and only one selection and the unique mark is in place
+  b. Partial - some ballot options are selected but no more than one selection for any option and the unique mark is in place
+  c. Invalid - any number of ballot option has more than one selection or the unique mark is not in place
 9) Any scanned ballot that is Invalid will not be accepted into the ballot box. 
 
 Modules:
-  Embedded Vote Collection - EVC
-  Cloud Vote Verification - CVV
+  a. Embedded Vote Collection - EVC
+  b. Cloud Vote Verification - CVV
 
 Services:
-  EVC::Imaging
-  EVC::UniqueID
-  EVC::Collection
-  EVC::Settings
-  EVC::Security
+  a. EVC::Imaging
+  b. EVC::UniqueID
+  c. EVC::Collection
+  d. EVC::Settings
+  e. EVC::Security
 
-  CVV::MachineLearning
-  CVV::Tabulation
-  CVV::Security
-  CVV::Settings
+  a. CVV::MachineLearning
+  b. CVV::Tabulation
+  c. CVV::Security
+  d. CVV::Settings
