@@ -34,3 +34,19 @@ The system can connects out to a central system through TCP but only after it ha
   b) Partial - some ballot options are selected but no more than one selection for any option and the unique mark is in place
   c) Invalid - any number of ballot option has more than one selection or the unique mark is not in place
 9) Any scanned ballot that is Invalid will not be accepted into the ballot box. 
+
+Modules:
+Embedded Vote Collection - EVC
+Cloud Vote Verification - CVV
+
+Services:
+EVC::Imaging
+EVC::UniqueID
+EVC::Collection
+EVC::Settings
+EVC::Security
+
+CVV::MachineLearning
+CVV::Tabulation
+CVV::Security
+CVV::Settings
