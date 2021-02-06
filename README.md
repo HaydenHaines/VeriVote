@@ -1,4 +1,4 @@
-# verita
+# Verita
 Open source vote system written in rust for absolutely trustworthy voting systems
 
 The goal of a voting system is four fold. 
