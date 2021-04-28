@@ -25,7 +25,7 @@ Embedded system
   4) Collect each vote cast, 
   5) Uses an individual unique identifier system non-signature
   6) Prints a day end report
-  7) Connects once and only once to central system uploads day end report only when vote system is closed.
+  7) Connects to central system uploads day end report only when vote system is closed.
   8) Uses the unique identifier system to verify each ballot was scanned only once
   9) Manages states for each stage of the vote day.
   10) Manages the terminus of ballots.
@@ -37,7 +37,8 @@ Central System
   4) Allows recount entry and verification of unique identification system manually.
 
 No incoming access to the ballot box system through TCP or Serial. 
-The ballot box system can connect outboud to a central collection system through TCP once and only once and only after it has been moved to END_OF_DAY (EOD). 
+The ballot box system can connect outboud to a central collection system through TCP after it has been moved to END_OF_DAY (EOD). After a successful transfer then it can be places back in BOD to start over. 
+
 BALLOT BOX STATE MACHINE
 1) Turning the System on will allow it to stay in the current mode or move to BEGIN_OF_DAY (BOD)
 2) Moving a system to BOD will clear all previous votes.
@@ -68,7 +69,7 @@ BALLOT BOX STATE MACHINE
 24) HAND is an error condition requiring a hand count in that case that someone has illegally scanned a ballot and therefore destroyed the integrity of the ballot box. 
 25) HAND can only move to BOD
 26) HAND will print a report
-27) HAND can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+27) HAND can make a TCP connection to the central collection server. 
 28) HAND reports the error condition and the image of each ballot
 29) In the central system the totals of the ballot box must be entered by a certified user.
 30) HAND cannot move to BOD if it has not transfered the report to the central server. 
@@ -77,7 +78,7 @@ BALLOT BOX STATE MACHINE
 33) EOD will print a report of every vote cast. 
 34) The EOD report must match the display on the top of the ballot collection box. 
 35) A verification must be entered that the displaty and the report match with an id of the verifier for prosecutor identification.
-36) EOD can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+36) EOD can make a TCP connection to the central collection server.
 37) EOD transfers the vote totals and the image of each ballot
 38) In the central system the totals of the ballot box must be verified by a certified user.
 39) In the central system the envelope identifiers to cross reference with all requested absentee votes to verify only one per person and that only requested absentee ballots were received. 
