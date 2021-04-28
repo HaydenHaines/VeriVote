@@ -2,9 +2,9 @@
 Open source voting system written in Rust. Unless a system is open it can never be secure. Open source repository will house all code and schematics.
 
 The goal of any trusted voting system is five(5) fold. 
-1) That the citizenry is assured that every legal voter can cast a vote.
-2) That the citizenry is assured that only legal voters cast legal ballots.
-3) That the voter is assured that their vote is always counted.
+1) That the citizenry is assured that every legal voter can cast a ballot.
+2) That the citizenry is assured that only legal voters cast ballots.
+3) That the voter is assured that their ballot is always counted.
 4) That the voter is assured that their ballot is secret.
 5) That any ballot is only counted one time. 
 
