@@ -5,7 +5,7 @@ The goal of any trusted voting system is five(5) fold.
 1) That the citizenry is assured that every legal voter can cast a vote.
 2) That the citizenry is assured that only legal voters cast legal ballots.
 3) That the voter is assured that their vote is always counted.
-4) That the voter is assured that their vote is always anonymous.
+4) That the voter is assured that their ballot is secret.
 5) That any ballot is only counted one time. 
 
 If these five(5) hold, the rest will take care of itself. 
