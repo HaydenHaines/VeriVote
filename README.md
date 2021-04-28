@@ -56,29 +56,31 @@ BALLOT BOX STATE MACHINE
 13) Any scanned ballot that is Invalid will not be accepted into the ballot box.
 14) No Time stamps on ballot scans only session ID
 15) Absentee ballot envelopes are scanned separately into the same box. 
-16) If Absentee envelopes != absentee ballots O_MODE changes to HAND
-17) If the ballot box is tampered with O_MODE changes to HAND
-18) If the same ballot is processed twice O_MODE changes to HAND
-19) If a configuration Ballot is processed O_MODE changes to HAND
-20) O_MODE can only move to EOD or HAND
-21) O_MODE moves to HAND
-22) HAND will no longer accept ballots
-23) HAND is an error condition requiring a hand count in that case that someone has illegally scanned a ballot and therefore destroyed the integrity of the ballot box. 
-24) HAND can only move to BOD
-25) HAND will print a report
-26) HAND can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
-27) HAND reports the error condition and the image of each ballot
-28) In the central system the totals of the ballot box must be entered by a certified user.
-29) HAND cannot move to BOD if it has not transfered the report to the central server. 
-30) O_MODE moves to EOD
-31) Once a system is moved to EOD, no ballots can be collected.
-32) EOD will print a report of every vote cast. 
-33) The EOD report must match the display on the top of the ballot collection box. 
-34) A verification must be entered that the displaty and the report match with an id of the verifier for prosecutor identification.
-35) EOD can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
-36) EOD transfers the vote totals and the image of each ballot
-37) In the central system the totals of the ballot box must be verified by a certified user.
-38) EOD cannot move to BOD if it has not transfered the report to the central server. 
+16) Each Absentee envelop has a unique identifier.
+17) If Absentee envelopes != absentee ballots O_MODE changes to HAND
+18) If the ballot box is tampered with O_MODE changes to HAND
+19) If the same ballot is processed twice O_MODE changes to HAND
+20) If a configuration Ballot is processed O_MODE changes to HAND
+21) O_MODE can only move to EOD or HAND
+22) O_MODE moves to HAND
+23) HAND will no longer accept ballots
+24) HAND is an error condition requiring a hand count in that case that someone has illegally scanned a ballot and therefore destroyed the integrity of the ballot box. 
+25) HAND can only move to BOD
+26) HAND will print a report
+27) HAND can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+28) HAND reports the error condition and the image of each ballot
+29) In the central system the totals of the ballot box must be entered by a certified user.
+30) HAND cannot move to BOD if it has not transfered the report to the central server. 
+31) O_MODE moves to EOD
+32) Once a system is moved to EOD, no ballots can be collected.
+33) EOD will print a report of every vote cast. 
+34) The EOD report must match the display on the top of the ballot collection box. 
+35) A verification must be entered that the displaty and the report match with an id of the verifier for prosecutor identification.
+36) EOD can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+37) EOD transfers the vote totals and the image of each ballot
+38) In the central system the totals of the ballot box must be verified by a certified user.
+39) In the central system the envelope identifiers to cross reference with all requested absentee votes to verify only one per person and that only requested absentee ballots were received. 
+40) EOD cannot move to BOD if it has not transfered the report to the central server. 
 
 Modules:
   1) Embedded Vote Collection - EVC
