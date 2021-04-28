@@ -1,4 +1,4 @@
-# VeriVote
+# VeriVote - Only a fully open system can be fully secure
 Open source voting system written in Rust. Unless a system is open it can never be secure. Open source repository will house all code and schematics.
 
 The goal of any trusted voting system is four(4) fold. 
