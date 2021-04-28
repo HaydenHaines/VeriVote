@@ -1,14 +1,15 @@
 # VeriVote - Only a fully open system can be fully secure
 Open source voting system written in Rust. Unless a system is open it can never be secure. Open source repository will house all code and schematics.
 
-The goal of any trusted voting system is four(4) fold. 
-1) That the citizenry is assured that only legal voters cast legal ballots.
-2) That the voter is assured that their vote is always counted.
-3) That the voter is assured that their vote is always anonymous.
-4) That any ballot is only counted one time. 
+The goal of any trusted voting system is five(5) fold. 
+1) That the citizenry is assured that every legal voter can cast a vote.
+2) That the citizenry is assured that only legal voters cast legal ballots.
+3) That the voter is assured that their vote is always counted.
+4) That the voter is assured that their vote is always anonymous.
+5) That any ballot is only counted one time. 
 
-If these four(4) hold, the rest will take care of itself. 
-*** A software system CAN insure the last three.
+If these five(5) hold, the rest will take care of itself. 
+*** A software system can only insure the final three.
 Therefore the goal of the VeriVote system is to
 1) Assure that each voter's vote is counted.
 2) Assure that each voter's vote is anonymous.
