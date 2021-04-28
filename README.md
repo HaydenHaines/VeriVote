@@ -52,13 +52,25 @@ BALLOT BOX STATE MACHINE
   2) Partial - A) some ballot options are selected but no more than one selection for any option and B) the unique mark is in place
   3) Invalid - A) any number of ballot options has more than one selection or B) the unique mark is not in place or C) no options are selected
 11) Any scanned ballot that is Invalid will not be accepted into the ballot box.
-12) Once a system is moved to EOD, no votes can be collected.
-13) EOD will print a report of every vote cast. 
-14) The EOD report must match the display on the top of the ballot collection box. 
-15) A verification must be entered that the displaty and the report match with an id of the verifier for prosecutor identification.
-16) EOD can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
-17) In the central system the totals of the ballot box must be verified by a certified user.
-18) EOD cannot move to BOD if it has not transfered the report to the central server. 
+12) O_MODE can only move to EOD or HAND
+13) O_MODE moves to HAND
+14) HAND will no longer accept ballots
+15) HAND is an error condition requiring a hand count in that case that someone has illegally scanned a ballot and therefore destroyed the integrity of the ballot box. 
+16) HAND can only move to BOD
+17) HAND will print a report
+18) HAND can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+19) HAND reports the error condition and the image of each ballot
+22) In the central system the totals of the ballot box must be entered by a certified user.
+23) HAND cannot move to BOD if it has not transfered the report to the central server. 
+24) O_MODE moves to EOD
+25) Once a system is moved to EOD, no ballots can be collected.
+26) EOD will print a report of every vote cast. 
+27) The EOD report must match the display on the top of the ballot collection box. 
+28) A verification must be entered that the displaty and the report match with an id of the verifier for prosecutor identification.
+29) EOD can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+30) EOD transfers the vote totals and the image of each ballot
+31) In the central system the totals of the ballot box must be verified by a certified user.
+32) EOD cannot move to BOD if it has not transfered the report to the central server. 
 
 Modules:
   1) Embedded Vote Collection - EVC
