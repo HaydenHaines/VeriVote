@@ -11,9 +11,9 @@ The goal of any trusted voting system is five(5) fold.
 If these five(5) hold, the rest will take care of itself. 
 *** A software system can only insure the final three.
 Therefore the goal of the VeriVote system is to
-1) Assure that each voter's vote is counted.
-2) Assure that each voter's vote is anonymous.
-3) Assure that each voter's vote is counted only once.
+1) Assure that each ballot is counted.
+2) Assure that each ballot is secret.
+3) Assure that each ballot is counted only once.
 
 New Process:
 To do this, we will employ a additional new technology. An imaging system will be located on top of every ballot collection box. Each ballot will include an open space for a random hand drawing by the voter. It can be any shape, any consistency as long as it include no less than 85% whitespace, and is not the voter's signature.  Machine learning algorithms will be employed to render the shape into a score. Any two ballots that have equal scores will be flagged for hand examination to ensure that the same ballot was never run through a machine twice. 
