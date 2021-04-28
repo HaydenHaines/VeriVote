@@ -19,15 +19,16 @@ New Process:
 To do this, we will employ an additional new technology. An imaging system will be located on top of every ballot collection box. Each ballot will include an open space for a random hand drawing by the voter. It can be any shape, any consistency as long as it include no less than 85% whitespace, and is not the voter's signature.  Machine learning algorithms will be employed to render the shape into a score. Any two ballots that have equal scores will be flagged for hand examination to ensure that the same ballot was never run through a machine twice. 
 
 Embedded system
-  1) Images each ballot, 
-  2) Records each ballot, 
-  3) Collects each vote cast, 
-  4) Uses an individual unique identifier system non-signature
-  5) Prints a day end report
-  6) Connects once and only once to central system uploads day end report only when vote system is closed.
-  7) Uses the unique identifier system to verify each ballot was scanned only once
-  8) Manages states for each stage of the vote day.
-  9) Manages the terminus of ballots.
+  1) Image each ballot and envelope if absentee,
+  2) No timestamps are used so that video of voters cannot be tied to individual ballots or that envelopes can be linked to ballots directly, 
+  3) Record each ballot, 
+  4) Collect each vote cast, 
+  5) Uses an individual unique identifier system non-signature
+  6) Prints a day end report
+  7) Connects once and only once to central system uploads day end report only when vote system is closed.
+  8) Uses the unique identifier system to verify each ballot was scanned only once
+  9) Manages states for each stage of the vote day.
+  10) Manages the terminus of ballots.
 
 Central System 
   1) Tabulates all the collected votes
@@ -54,7 +55,7 @@ BALLOT BOX STATE MACHINE
   2) Partial - A) some ballot options are selected but no more than one selection for any option and B) the unique mark is in place
   3) Invalid - A) any number of ballot options has more than one selection or B) the unique mark is not in place or C) no options are selected
 13) Any scanned ballot that is Invalid will not be accepted into the ballot box.
-14) No Time stamps on ballot scans only session ID
+14) No timestamps on ballot scans only session ID
 15) Absentee ballot envelopes are scanned separately into the same box. 
 16) Each Absentee envelop has a unique identifier.
 17) If Absentee envelopes != absentee ballots O_MODE changes to HAND
