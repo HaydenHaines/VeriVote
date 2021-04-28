@@ -47,9 +47,9 @@ BALLOT BOX STATE MACHINE
 8) Once IAT is approved, the system moves to OPERATIONAL (O_MODE). 
 9) In O_MODE, no TCP or Serial connection is possible. 
 10) In O_MODE, each ballot scanned is recorded as a incrementing number with a status of
-  1) Full - A) all ballot options have one and only one selection B) the unique mark is in place
-  2) Partial - A) some ballot options are selected but no more than one selection for any option B) the unique mark is in place
-  3) Invalid - A) any number of ballot options has more than one selection B) the unique mark is not in place C) no options are selected
+  1) Full - A) all ballot options have one and only one selection and B) the unique mark is in place
+  2) Partial - A) some ballot options are selected but no more than one selection for any option and B) the unique mark is in place
+  3) Invalid - A) any number of ballot options has more than one selection or B) the unique mark is not in place or C) no options are selected
 11) Any scanned ballot that is Invalid will not be accepted into the ballot box.
 12) Once a system is moved to EOD, no votes can be collected.
 13) EOD will print a report of every vote cast. 
