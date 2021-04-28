@@ -1,5 +1,5 @@
 # VeriVote - Only a fully open system can be fully secure
-Open source voting system written in Rust. Unless a system is open it can never be truly secure. Obfiscation is useless as a security measure. This Open source repository will house all code and schematics so that many universities and companies can contribute code to the repository. The code will always be free. The hope is that worldwide, we can expect in future generations to have free, fair and legal elections. 
+Open source voting system written in Rust. Unless a system is open it can never be truly secure. Obfuscation is useless as a security measure. This Open source repository will house all code and schematics so that many universities and companies can contribute code to the repository. The code will always be free. The hope is that worldwide, we can expect in future generations to have free, fair and legal elections. 
 
 I will handle approval of merges.
 
@@ -22,7 +22,7 @@ To do this, we will employ an additional new technology. An imaging system will 
 
 Embedded system
   1) Images each ballot, 
-  2) Records each each ballot, 
+  2) Records each ballot, 
   3) Collects each vote cast, 
   4) Uses an individual unique identifier system non-signature
   5) Prints a day end report
