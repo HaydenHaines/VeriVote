@@ -1,6 +1,8 @@
 # VeriVote - Only a fully open system can be fully secure
 An open source voting system written in Rust. Unless a system is open it can never be truly secure. Obfuscation is useless as a security measure. This Open source repository will house all code and schematics so that many universities and companies can contribute code to the repository. The code will always be free. The hope is that worldwide, we can expect in future generations to have free, fair and legal elections. 
 
+Object diagrams, state diagrams and flow diagrams will be uploaded a separate documents. 
+
 The goal of any trusted voting system is five(5) fold. 
 1) That the citizenry is assured that every legal voter can cast a ballot.
 2) That the citizenry is assured that only legal voters cast ballots.
@@ -29,6 +31,7 @@ Embedded system
   8) Uses the unique identifier system to verify each ballot was scanned only once
   9) Manages states for each stage of the vote day.
   10) Manages the terminus of ballots.
+  11) Once attached to a ballot box, cannot be removed without error until EOD (End of Day) is complete.
 
 Central System 
   1) Tabulates all the collected votes
@@ -37,9 +40,9 @@ Central System
   4) Allows recount entry and verification of unique identification system manually.
 
 No incoming access to the ballot box system through TCP or Serial. 
-The ballot box system can connect outboud to a central collection system through TCP after it has been moved to END_OF_DAY (EOD). After a successful transfer then it can be places back in BOD to start over. 
+The ballot box system can connect outboud to a central collection system through TCP after it has been moved to EOD (End of Day). After a successful transfer then it can be places back in BOD (Begin of Day) to start over. 
 
-BALLOT BOX STATE MACHINE
+BALLOT BOX STATE PROCESS
 1) Turning the System on will allow it to stay in the current mode or move to BEGIN_OF_DAY (BOD)
 2) Moving a system to BOD will clear all previous votes.
 3) In BOD, no TCP or Serial connection is possible. 
