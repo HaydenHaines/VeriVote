@@ -42,35 +42,43 @@ BALLOT BOX STATE MACHINE
 2) Moving a system to BOD will clear all previous votes.
 3) In BOD, no TCP or Serial connection is possible. 
 4) BOD, requires the precinct number, date and BOD Report to move to INITIALIZE_AND_TEST. 
-5) INITIALIZE_AND_TEST (IAT) requires a program scan to be run. A ballot or ballots are run and options are set. 
-6) In IAT, no TCP or Serial connection is possible.
-7) In order to move forward, a ballot must be run for each option so that every ballot option has at least one vote. After each ballot option has one vote, then the precinct worker will be required to enter an id, and approve that the ballots are in line with the configuration.
-8) Once IAT is approved, the system moves to OPERATIONAL (O_MODE). 
-9) In O_MODE, no TCP or Serial connection is possible. 
-10) In O_MODE, each ballot scanned is recorded as a incrementing number with a status of
+5) INITIALIZE_AND_TEST (IAT) requires a program scan to be run on a configuration ballot which identifies each option. 
+6) Sample ballots are run to test configuration. 
+7) In IAT, no TCP or Serial connection is possible.
+8) In order to move forward, sample ballots must be run for each option so that every ballot option has at least one vote. 
+9) After each ballot option has at least one vote, then a precinct worker will be required to enter an id, and approve that the ballots are in line with the configuration.
+10) Once IAT is approved, the system moves to OPERATIONAL (O_MODE). 
+11) In O_MODE, no TCP or Serial connection is possible. 
+12) In O_MODE, each ballot scanned is recorded as a incrementing number with a status of
   1) Full - A) all ballot options have one and only one selection and B) the unique mark is in place
   2) Partial - A) some ballot options are selected but no more than one selection for any option and B) the unique mark is in place
   3) Invalid - A) any number of ballot options has more than one selection or B) the unique mark is not in place or C) no options are selected
-11) Any scanned ballot that is Invalid will not be accepted into the ballot box.
-12) O_MODE can only move to EOD or HAND
-13) O_MODE moves to HAND
-14) HAND will no longer accept ballots
-15) HAND is an error condition requiring a hand count in that case that someone has illegally scanned a ballot and therefore destroyed the integrity of the ballot box. 
-16) HAND can only move to BOD
-17) HAND will print a report
-18) HAND can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
-19) HAND reports the error condition and the image of each ballot
-22) In the central system the totals of the ballot box must be entered by a certified user.
-23) HAND cannot move to BOD if it has not transfered the report to the central server. 
-24) O_MODE moves to EOD
-25) Once a system is moved to EOD, no ballots can be collected.
-26) EOD will print a report of every vote cast. 
-27) The EOD report must match the display on the top of the ballot collection box. 
-28) A verification must be entered that the displaty and the report match with an id of the verifier for prosecutor identification.
-29) EOD can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
-30) EOD transfers the vote totals and the image of each ballot
-31) In the central system the totals of the ballot box must be verified by a certified user.
-32) EOD cannot move to BOD if it has not transfered the report to the central server. 
+13) Any scanned ballot that is Invalid will not be accepted into the ballot box.
+14) No Time stamps on ballot scans only session ID
+15) Absentee ballot envelopes are scanned separately into the same box. 
+16) If Absentee envelopes != absentee ballots O_MODE changes to HAND
+17) If the ballot box is tampered with O_MODE changes to HAND
+18) If the same ballot is processed twice O_MODE changes to HAND
+19) If a configuration Ballot is processed O_MODE changes to HAND
+20) O_MODE can only move to EOD or HAND
+21) O_MODE moves to HAND
+22) HAND will no longer accept ballots
+23) HAND is an error condition requiring a hand count in that case that someone has illegally scanned a ballot and therefore destroyed the integrity of the ballot box. 
+24) HAND can only move to BOD
+25) HAND will print a report
+26) HAND can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+27) HAND reports the error condition and the image of each ballot
+28) In the central system the totals of the ballot box must be entered by a certified user.
+29) HAND cannot move to BOD if it has not transfered the report to the central server. 
+30) O_MODE moves to EOD
+31) Once a system is moved to EOD, no ballots can be collected.
+32) EOD will print a report of every vote cast. 
+33) The EOD report must match the display on the top of the ballot collection box. 
+34) A verification must be entered that the displaty and the report match with an id of the verifier for prosecutor identification.
+35) EOD can make a TCP connection to the central collection server ONCE and ONLY_ONCE. 
+36) EOD transfers the vote totals and the image of each ballot
+37) In the central system the totals of the ballot box must be verified by a certified user.
+38) EOD cannot move to BOD if it has not transfered the report to the central server. 
 
 Modules:
   1) Embedded Vote Collection - EVC
