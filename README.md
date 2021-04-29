@@ -39,9 +39,18 @@ Central System
   3) Uses ML to compare the unique identifiers across all ballots to verify that each ballot was counted only once. 
   4) Allows recount entry and verification of unique identification system manually.
 
+States
+  1) Initialize
+  2) Test and Configure
+  3) Operational Mode
+  4) End of Day
+  5) Hand / Error Mode
+  6) Closed / Archived
+  
 Modules:
   1) Embedded Vote Collection - EVC
   2) Cloud Vote Verification - CVV
+  3) UIUC Machine Learning
 
 Services:
   1) EVC::Imaging
@@ -49,8 +58,9 @@ Services:
   3) EVC::Collection
   4) EVC::Settings
   5) EVC::Security
+  6) UIUC::ML
 
-  1) CVV::MachineLearning
+  1) UIUC::ML
   2) CVV::Tabulation
   3) CVV::Security
   4) CVV::Settings
