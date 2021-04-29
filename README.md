@@ -17,15 +17,15 @@ Therefore the goal of the VeriVote system is to
 2) Assure that each ballot is secret.
 3) Assure that each ballot is counted only once.
 
-New Process:
-To do this, we will employ an additional new technology. An imaging system will be located on top of every ballot collection box. Each ballot will include an open space for a random hand drawing by the voter. It can be any shape, any consistency as long as it include no less than 85% whitespace, and is not the voter's signature.  Machine learning algorithms will be employed to render the shape into a score. Any two ballots that have equal scores will be flagged for hand examination to ensure that the same ballot was never run through a machine twice. 
+New Process IUIS:
+To do this, we will employ an additional new technology. IUIS is an individual unique identifier system. Each ballot will include an open space for a random hand drawing by the voter. It can be any shape, any consistency as long as it include no less than 85% whitespace, and is not the voter's signature.  An imaging system will be located on top of every ballot collection box. Machine learning algorithms will be employed to render the shape into a score. Any two ballots that have equal scores will be flagged for hand examination to ensure that the same ballot was never run through a machine twice. 
 
 Embedded system
-  1) Image each ballot and envelope if absentee,
-  2) No timestamps are used so that video of voters cannot be tied to individual ballots or that envelopes can be linked to ballots directly, 
+  1) Image each ballot and if absentee, the envelope separately,
+  2) No timestamps are used but rather GUIDs so that video of voters cannot be tied to individual ballots or that envelopes can be linked to ballots directly, 
   3) Record each ballot, 
   4) Collect each vote cast, 
-  5) Uses an individual unique identifier system non-signature
+  5) Uses an IUIS individual unique identifier system (non-signature)
   6) Prints a day end report
   7) Connects to central system uploads day end report only when vote system is closed.
   8) Uses the unique identifier system to verify each ballot was scanned only once
