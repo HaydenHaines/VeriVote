@@ -1,17 +1,17 @@
 # VeriVote - Only a fully open system can be fully secure
-An open source voting system written in Rust. Unless a system is open it can never be truly secure. Obfuscation is useless as a security measure. This Open source repository will house all code and schematics so that many universities and companies can contribute code to the repository. The code will always be free. The hope is that worldwide, we can expect in future generations to have free, fair and legal elections. 
+An open source voting system written in Rust. Unless a system is open it can never be truly secure. Obfuscation is useless as a security measure. This Open source repository will house all code and schematics so that many universities and companies can contribute code to the repository. The code will always be free.We hope that this will enable uture generations to have free, fair and legal elections worldwide. 
 
 Object diagrams, state diagrams and flow diagrams will be uploaded a separate documents. 
 
 The goal of any trusted voting system is five(5) fold. 
-1) That the citizenry is assured that every legal voter can cast a ballot.
-2) That the citizenry is assured that only legal voters cast ballots.
-3) That the voter is assured that their ballot is always counted.
-4) That the voter is assured that their ballot is secret.
+1) That the constituency is assured that every legal voter can cast a ballot.
+2) That the constituency is assured that only legal voters cast ballots.
+3) That each voter is assured that their ballot is always counted.
+4) That each voter is assured that their ballot is secret.
 5) That any ballot is only counted one time. 
 
 If these five(5) hold, the rest will take care of itself. 
-*** A software system can only insure the final three.
+*** A software system can only ensure the final three.
 Therefore the goal of the VeriVote system is to
 1) Assure that each ballot is counted.
 2) Assure that each ballot is secret.
@@ -23,8 +23,8 @@ To do this, we will employ an additional new technology. IUIS is an individual u
 Embedded system
   1) Image each ballot and if absentee, the envelope separately,
   2) No timestamps are used but rather GUIDs so that video of voters cannot be tied to individual ballots or that envelopes can be linked to ballots directly, 
-  3) Record each ballot, 
-  4) Collect each vote cast, 
+  3) Record each ballot
+  4) Collect each vote cast
   5) Uses an IUIS individual unique identifier system (non-signature)
   6) Prints a day end report
   7) Connects to central system uploads day end report only when vote system is closed.
